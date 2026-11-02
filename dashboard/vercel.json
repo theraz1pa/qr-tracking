@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/:slug([a-z0-9][a-z0-9-]{1,39})",
+      "destination": "/api/r?slug=:slug"
+    }
+  ]
+}

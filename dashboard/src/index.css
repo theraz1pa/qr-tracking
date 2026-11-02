@@ -1,0 +1,649 @@
+/* Farben von therapie1 (siehe Website: --therapie-blue, -orange, -sky, -black) */
+:root {
+  --bg: #efeef0;
+  --card: #ffffff;
+  --text: #1f2a44;
+  --muted: #5f6679;
+  --border: #dcdde3;
+  --accent: #1f2a44;
+  --accent-hover: #191919;
+  --accent-soft: #e4e6ec;
+  --orange: #e06a2f;
+  --danger: #b42318;
+  --ok: #15803d;
+  --radius: 10px;
+
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: #f1f5f9;
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.row > input {
+  flex: 1 1 240px;
+}
+
+/* Layout */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  border-bottom: 3px solid var(--orange);
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img {
+  display: block;
+  height: 24px;
+  width: auto;
+}
+
+.brand span {
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.topbar .muted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.topbar .btn-link {
+  color: #fff;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab {
+  border: 0;
+  background: none;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+.tab.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-weight: 600;
+}
+
+.auth-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.center-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-card > button {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+/* Formulare */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.field > label,
+.field > .label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.grow {
+  flex: 1 1 240px;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+input[readonly] {
+  background: #f8fafc;
+}
+
+.btn {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn.danger {
+  color: var(--danger);
+  border-color: #fecaca;
+}
+
+.btn-link {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.segmented button {
+  border: 0;
+  background: none;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+}
+
+.segmented button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.error,
+.info {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+}
+
+.error {
+  color: var(--danger);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.info {
+  color: var(--accent);
+  background: #f6f1e6;
+  border: 1px solid #ece6d6;
+}
+
+/* Statistik */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.tile-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tile-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.tile-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.trend-up {
+  color: var(--ok);
+}
+
+.trend-down {
+  color: var(--danger);
+}
+
+.charts-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+table.clickable tbody tr {
+  cursor: pointer;
+}
+
+table.clickable tbody tr:hover,
+table.clickable tbody tr:focus-visible {
+  background: #f8fafc;
+}
+
+.selected-code {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+/* Karten (Leaflet) – eigener Stapelkontext, damit die Karte nicht über die Kopfzeile rutscht */
+
+.map {
+  position: relative;
+  z-index: 0;
+  height: 380px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map--picker {
+  height: 300px;
+  cursor: crosshair;
+}
+
+.map-popup {
+  display: grid;
+  gap: 0.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+}
+
+.map-popup .btn {
+  margin-top: 0.35rem;
+  padding: 0.3rem 0.6rem;
+}
+
+/* QR-Codes verwalten */
+
+.location-box {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.design-grid {
+  display: grid;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.design-grid input[type="color"] {
+  height: 42px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.color-input {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.color-input input[type="color"] {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 42px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.color-input input[type="text"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+input.invalid {
+  border-color: var(--danger);
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+/* Schachbrett zeigt in der Vorschau, dass der Hintergrund transparent ist. */
+.qr-preview.transparent {
+  background: repeating-conic-gradient(#e4e6ec 0% 25%, #ffffff 0% 50%) 50% / 16px 16px;
+}
+
+/* Schachbrett, damit auch weiße/transparente Logos sichtbar sind */
+.logo-thumb {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: repeating-conic-gradient(#e4e6ec 0% 25%, #ffffff 0% 50%) 50% / 10px 10px;
+}
+
+.logo-thumb img {
+  max-width: 34px;
+  max-height: 34px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-header p {
+  margin-top: 0.25rem;
+}
+
+.design-layout {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.setting-label,
+.setting .field > label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.setting .field {
+  gap: 0.45rem;
+}
+
+.setting-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.design-preview-box {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.design-preview {
+  width: 132px;
+  height: 132px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.design-preview.transparent {
+  background: repeating-conic-gradient(#e4e6ec 0% 25%, #ffffff 0% 50%) 50% / 16px 16px;
+}
+
+.badge + .badge,
+code + .badge {
+  margin-left: 0.4rem;
+}
+
+.code-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.qr-preview {
+  width: 160px;
+  height: 160px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: var(--ok);
+}
+
+.badge.off {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+@media (min-width: 760px) {
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .charts-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 180px 1fr 1.5fr auto;
+    align-items: end;
+  }
+
+  .design-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.3fr) auto;
+  }
+
+  .code-card {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .tabs {
+    order: 3;
+    width: 100%;
+  }
+}

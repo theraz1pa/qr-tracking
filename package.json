@@ -1,0 +1,14 @@
+{
+  "name": "qr-tracking",
+  "private": true,
+  "scripts": {
+    "supabase:link": "supabase link --project-ref hnwhumtaggrhfpmwggif",
+    "db:push": "supabase db push",
+    "functions:deploy": "supabase functions deploy r --no-verify-jwt",
+    "dashboard:dev": "npm --prefix dashboard run dev",
+    "dashboard:build": "npm --prefix dashboard run build"
+  },
+  "devDependencies": {
+    "supabase": "^2.117.0"
+  }
+}

@@ -1,0 +1,7 @@
+# Nur projektspezifische Einstellungen, der Rest nutzt die CLI-Defaults.
+# Auth-Einstellungen (Registrierung aus, Site URL) werden im Supabase-Dashboard gepflegt, siehe README.
+project_id = "qr-tracking"
+
+[functions.r]
+# QR-Codes rufen die Function ohne Authorization-Header auf.
+verify_jwt = false
